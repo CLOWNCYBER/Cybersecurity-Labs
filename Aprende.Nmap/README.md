@@ -1,7 +1,0 @@
--sV	Intenta determinar la versión de los servicios en ejecución.
--P-  escaneo de todos los puertos.
--Pn	Deshabilitar la detección de hosts y escanear en busca de puertos abiertos.
--A	PermiteSistema operativoy detección de versiones, ejecuta scripts integrados para una enumeración más detallada. 
--v	Modo detallado
--sS	TCPescaneo de puerto SYN
--sU	UDPescaneo de puertos
