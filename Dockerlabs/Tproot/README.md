@@ -1,11 +1,10 @@
 # Tproot
-/home/kali/Pictures/Screenshot_2026-08-02_15_31_25.png
 ## 📌 Information
 
 | Field | Value |
 |------|------|
 | Platform | DockerLabs |
-| Difficulty | Easy |
+| Difficulty | Very Easy |
 | OS | Linux |
 | Category | Privilege Escalation |
 
