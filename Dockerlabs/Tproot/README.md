@@ -55,7 +55,7 @@ En FTP encontramos la vulnerobilidad vsftpd 2.3.4
 NO encontramos nada importante en http
 <img width="1920" height="921" alt="Screenshot_2026-08-02_15_53_13" src="https://github.com/user-attachments/assets/6225488f-5586-459d-9769-0dd7a0a3ce90" />
 
-Usamos la herramienta searchsploit
+Usamos la herramienta searchsploit y el nombre de la vulnerabilidad
 
 <img width="1920" height="921" alt="Screenshot_2026-08-02_16_01_28" src="https://github.com/user-attachments/assets/7323b7fb-9aac-4f26-832e-c9e36de6b375" />
 
