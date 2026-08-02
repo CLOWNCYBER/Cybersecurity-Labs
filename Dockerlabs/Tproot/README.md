@@ -40,16 +40,9 @@ nmap -sV -Pn -A -Pn -T4 [ip]
 ### Findings
 
 - FTP
-- SSH
 - HTTP
 
 ---
-
-## Gobuster
-
-```bash
-gobuster dir -u http://TARGET -w wordlist.txt
-```
 
 ### Findings
 
