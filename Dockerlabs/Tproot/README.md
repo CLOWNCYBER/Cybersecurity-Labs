@@ -50,6 +50,8 @@ nmap -sV -Pn -A -Pn -T4 [ip]
 
 En FTP encontramos la vulnerobilidad vsftpd 2.3.4
 
+
+
 NO encontramos nada importante en http
 <img width="1920" height="921" alt="Screenshot_2026-08-02_15_53_13" src="https://github.com/user-attachments/assets/6225488f-5586-459d-9769-0dd7a0a3ce90" />
 
