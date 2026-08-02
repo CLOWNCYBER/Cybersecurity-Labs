@@ -72,10 +72,10 @@ Lo ejecutamos con python3 el nombre del exploit 49757.py [y la ip de la maquina 
 <img width="1920" height="921" alt="Screenshot_2026-08-02_16_54_45" src="https://github.com/user-attachments/assets/d443b7fc-b65f-4e23-a8c5-41b61bc85231" />
 
 Y obtenemos la reverse shell
-Con script /dev/null -c bash Podemos cambiar el pron de la maquina
+
 
 <img width="1920" height="921" alt="Screenshot_2026-08-02_16_55_49" src="https://github.com/user-attachments/assets/c1139121-e3f2-4d9d-a4dd-6cc02b8aa050" />
-
+Con script /dev/null -c bash Podemos cambiar el pron de la maquina
 <img width="1920" height="921" alt="Screenshot_2026-08-02_16_56_44" src="https://github.com/user-attachments/assets/39197522-d3b3-4a47-856b-0a1fd0ae9b84" />
 
 
