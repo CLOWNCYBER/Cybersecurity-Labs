@@ -26,7 +26,7 @@ Obtain root access.
 - Nmap
 - Netcat
 - Searchsploit
-
+- Python3
 ---
 
 # 🔍 Enumeration
