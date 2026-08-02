@@ -104,3 +104,7 @@ No fue necesaria una escalada de privilegios, ya que el acceso inicial se obtuvo
 ROOT
 ```
 261fd3f32200f950f231816b4e9a0594
+
+## ¿Cómo corregir esta vulnerabilidad?
+
+La mejor solución es **actualizar vsftpd a una versión segura**, ya que el backdoor solo afecta a la versión comprometida **2.3.4**. También es recomendable reemplazar FTP por **SFTP**, que cifra toda la comunicación y ofrece mayor seguridad. Si es necesario seguir utilizando FTP, se puede implementar **FTPS**, limitar el acceso mediante un firewall y permitir conexiones únicamente desde direcciones IP autorizadas.
