@@ -61,7 +61,7 @@ Usamos la herramienta searchsploit
 
 Con searchsploit En contramos exploit disponibles 
 
-Descargamos el exploit
+Descargamos el exploit con searchsploit -m
 
 <img width="1920" height="921" alt="Screenshot_2026-08-02_16_02_46" src="https://github.com/user-attachments/assets/3fb279de-1e1d-4d3a-a049-51cc57ebf907" />
 
