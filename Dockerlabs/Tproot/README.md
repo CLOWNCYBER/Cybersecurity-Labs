@@ -65,7 +65,7 @@ Descargamos el exploit con searchsploit -m
 
 <img width="1920" height="921" alt="Screenshot_2026-08-02_16_02_46" src="https://github.com/user-attachments/assets/3fb279de-1e1d-4d3a-a049-51cc57ebf907" />
 
-Lo ejecutamos con python3 49757.py 172.17.0.2
+Lo ejecutamos con python3 el nombre del exploit 49757.py [y la ip de la maquina victima]
 
 <img width="1920" height="921" alt="Screenshot_2026-08-02_16_54_45" src="https://github.com/user-attachments/assets/d443b7fc-b65f-4e23-a8c5-41b61bc85231" />
 
