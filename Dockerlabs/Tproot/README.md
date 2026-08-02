@@ -48,6 +48,8 @@ nmap -sV -Pn -A -Pn -T4 [ip]
 
 # 🚀 Exploitation
 
+explotamos la vulnerabilidad de forma manual sin utilizar metasploit
+
 En FTP encontramos la vulnerobilidad vsftpd 2.3.4
 
 
@@ -81,25 +83,7 @@ Con script /dev/null -c bash Podemos cambiar el pron de la maquina
 
 # 🔑 Privilege Escalation
 
-Explain the vulnerability.
-
-Show evidence.
-
----
-
-# 📸 Screenshots
-
-```
-images/
-
-01-nmap.png
-
-02-gobuster.png
-
-03-shell.png
-
-04-root.png
-```
+No fue necesaria una escalada de privilegios, ya que el acceso inicial se obtuvo directamente como usuario `root`.
 
 ---
 
