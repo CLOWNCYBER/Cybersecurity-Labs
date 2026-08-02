@@ -34,7 +34,7 @@ Obtain root access.
 ## Nmap
 
 ```bash
-nmap -sCV TARGET_IP
+nmap -sV -Pn -A -Pn -T4 [ip]
 ```
 
 ### Findings
