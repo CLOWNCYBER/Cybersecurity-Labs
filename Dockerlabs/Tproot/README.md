@@ -36,6 +36,8 @@ Obtain root access.
 ```bash
 nmap -sV -Pn -A -Pn -T4 [ip]
 ```
+<img width="1920" height="921" alt="Screenshot_2026-08-02_15_58_22" src="https://github.com/user-attachments/assets/237bb3b3-b8cb-41cd-9b00-9f59d33635cd" />
+
 
 ### Findings
 
@@ -44,21 +46,34 @@ nmap -sV -Pn -A -Pn -T4 [ip]
 
 ---
 
-### Findings
-
-/admin
-
-/uploads
-
----
-
 # 🚀 Exploitation
 
-Describe every step.
+En FTP encontramos la vulnerobilidad vsftpd 2.3.4
 
-Explain WHY.
+NO encontramos nada importante en http
+<img width="1920" height="921" alt="Screenshot_2026-08-02_15_53_13" src="https://github.com/user-attachments/assets/6225488f-5586-459d-9769-0dd7a0a3ce90" />
 
-Do not only paste commands.
+Usamos la herramienta searchsploit
+
+<img width="1920" height="921" alt="Screenshot_2026-08-02_16_01_28" src="https://github.com/user-attachments/assets/7323b7fb-9aac-4f26-832e-c9e36de6b375" />
+
+Con searchsploit En contramos exploit disponibles 
+
+Descargamos el exploit
+
+<img width="1920" height="921" alt="Screenshot_2026-08-02_16_02_46" src="https://github.com/user-attachments/assets/3fb279de-1e1d-4d3a-a049-51cc57ebf907" />
+
+Lo ejecutamos con python3 49757.py 172.17.0.2
+
+<img width="1920" height="921" alt="Screenshot_2026-08-02_16_54_45" src="https://github.com/user-attachments/assets/d443b7fc-b65f-4e23-a8c5-41b61bc85231" />
+
+Y obtenemos la reverse shell
+Con script /dev/null -c bash Podemos cambiar el pron de la maquina
+
+<img width="1920" height="921" alt="Screenshot_2026-08-02_16_55_49" src="https://github.com/user-attachments/assets/c1139121-e3f2-4d9d-a4dd-6cc02b8aa050" />
+
+<img width="1920" height="921" alt="Screenshot_2026-08-02_16_56_44" src="https://github.com/user-attachments/assets/39197522-d3b3-4a47-856b-0a1fd0ae9b84" />
+
 
 ---
 
@@ -100,3 +115,4 @@ images/
 ```
 ROOT
 ```
+261fd3f32200f950f231816b4e9a0594
