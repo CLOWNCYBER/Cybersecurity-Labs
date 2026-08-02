@@ -20,7 +20,6 @@ Obtain root access.
 # 🛠 Tools
 
 - Nmap
-- Gobuster
 - Netcat
 - Searchsploit
 
