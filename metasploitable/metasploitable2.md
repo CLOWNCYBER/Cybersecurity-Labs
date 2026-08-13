@@ -48,121 +48,71 @@ Luego verifique la conectividad
 
 <img width="1920" height="921" alt="Screenshot_2026-08-12_22_56_18" src="https://github.com/user-attachments/assets/462f7f73-e86e-4493-b328-044034889495" />
 nmap nmap -sV -sC -sS -A -T5 192.168.100.213
+
 puertos y servicios descubiertos.
 
 <img width="563" height="373" alt="image" src="https://github.com/user-attachments/assets/954ecd15-41da-4c29-9e4e-1cc8a81b24b7" />
 
-* 21/tcp → FTP
-* 22/tcp → SSH
-* 23/tcp → Telnet
-* 80/tcp → HTTP
-* 139/tcp → SMB
+* 21/tcp → FTP vsftpd 2.3.4
+* 22/tcp → SSH OpenSSH 4.7p1
+* 23/tcp → Telnet Linux telnetd
+* 80/tcp → HTTP Apache httpd 2.2.8
+* 139/tcp → SMB smbd 3.X 
 
 ---
 
 # 🌐Enumeracion web🌐
 
-http://192.168.100.213
-```
+http://192.168.100.213 no encontramos nada en la wed con la ip
 
-Check the website and look for interesting information.
+<img width="1920" height="921" alt="Screenshot_2026-08-12_22_59_56" src="https://github.com/user-attachments/assets/d9c3c360-1ec3-4701-af7c-d723fe711425" />
 
-### Gobuster
 
-```bash
-gobuster dir -u http://TARGET_IP -w /usr/share/wordlists/dirb/common.txt
-```
+### Utilizamos la herramienta Gobuster para descubrir Directorios ocultos 
 
-### Findings
+<img width="1920" height="695" alt="Screenshot_2026-08-12_23_28_23" src="https://github.com/user-attachments/assets/c05588ae-64fd-4561-801b-0bf66fa65eb1" />
 
-Document interesting directories and files discovered.
 
-### 📸 Web Enumeration
+bash
+gobuster dir -u http://192.168.100.213 -w /usr/share/wordlists/dirb/common.txt -x php,txt,js,py,html
 
-Drag your screenshot here.
+Encontramos directorios oculos 
+dav
+phpMyAdmin
+test
+twiki
+pero dentro de ellos no habia nada importante 
 
----
-
-# 📂 FTP Enumeration
-
-If FTP is available, connect to the service:
-
-```bash
-ftp TARGET_IP
-```
-
-Check whether anonymous access is allowed.
-
-```text
-Username: anonymous
-Password: anonymous
-```
-
-Document anything interesting discovered through FTP.
-
-### 📸 FTP
-
-Drag your screenshot here.
-
----
-
-# 🔎 Service Enumeration
-
-Investigate the services discovered by Nmap.
-
-For each interesting service, document:
-
-* Service
-* Version
-* Possible vulnerabilities
-* Enumeration performed
-* Interesting findings
-
-Example:
-
-```text
-Service:
-Version:
-Potential vulnerability:
-Enumeration:
-Findings:
-```
-
----
 
 # 💣 Exploitation
 
-Once a vulnerable service has been identified, research the vulnerability before attempting exploitation.
+Con la herramienda searchsploit y la vercion de la vulneravilidad podemos encontrar exploits disponibles
 
-Search with:
+bash
+searchsploit  vsftpd 2.3.4
 
-```bash
-searchsploit SERVICE VERSION
-```
+<img width="1920" height="921" alt="Screenshot_2026-08-12_23_43_49" src="https://github.com/user-attachments/assets/d40d42ca-56e2-4225-9d74-d2f9522eecf7" />
 
-Or search through Metasploit:
+ENcontramos dos exploit uno en paython y otro en metasploitable
+yo desidi hacerlo con el de python manualmente 
 
-```bash
-msfconsole
-```
+CON la herramienta 
+searchsploit -m
+descargamos el exploit
 
-```text
-search SERVICE VERSION
-```
+<img width="1920" height="921" alt="Screenshot_2026-08-12_23_47_49" src="https://github.com/user-attachments/assets/fbbb95e0-b2d4-4fd3-b6fb-9eb0da4dc6d3" />
 
-Document:
+searchsploit -m unix/remote/49757.py
 
-1. What vulnerability was identified.
-2. Why it is vulnerable.
-3. Which exploit was selected.
-4. How the exploit was configured.
-5. What happened after exploitation.
 
-### 📸 Exploitation
+Con la herramienta python ejecutamos el exploit para obtener la shell reversa 
 
-Drag your screenshot here.
 
----
+<img width="1920" height="921" alt="Screenshot_2026-08-12_23_49_09" src="https://github.com/user-attachments/assets/ec030c1a-6160-4840-b7a1-40251decb638" />
+
+python3 49757.py 192.168.100.213
+python3 el nombre del exploit en el caso mio era 49757.py y la ip victima
+
 
 # 🐚 Initial Access
 
