@@ -38,20 +38,19 @@ Primero, identifique la dirección IP de la máquina Metasploitable 2
 lo hacemos con una herramienta llamada barrido.sh
 <img width="1920" height="921" alt="Screenshot_2026-08-12_20_28_01" src="https://github.com/user-attachments/assets/ce361033-bb0f-49cf-a555-106458c5d399" />
 
-```
 Luego verifique la conectividad
 
-<img width="1920" height="921" alt="Screenshot_2026-08-12_22_35_50" src="https://github.com/user-attachments/assets/13e6e6d0-c2ab-4496-ae03-0e540a7d678b" />
-
+<img width="1920" height="921" alt="Screenshot_2026-08-12_22_35_50" src="https://github.com/user-attachments/assets/4fa5e699-10e5-42e0-bb24-897ac8acd187" />
 
 ---
 
 ## 2. Nmap
+
+<img width="1920" height="921" alt="Screenshot_2026-08-12_22_56_18" src="https://github.com/user-attachments/assets/462f7f73-e86e-4493-b328-044034889495" />
 nmap nmap -sV -sC -sS -A -T5 192.168.100.213
 
- puertos y servicios descubiertos.
-
-
+puertos y servicios descubiertos.
+<img width="563" height="373" alt="image" src="https://github.com/user-attachments/assets/954ecd15-41da-4c29-9e4e-1cc8a81b24b7" />
 * 21/tcp → FTP
 * 22/tcp → SSH
 * 23/tcp → Telnet
