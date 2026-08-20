@@ -45,21 +45,13 @@ Posteriormente comprobamos la conectividad con la máquina:
 <img width="1920" height="921" alt="Screenshot_2026-08-20_01_16_50" src="https://github.com/user-attachments/assets/a51adf43-d0ec-4064-91e0-9026fa53cb5e" />
 
 
----
 
-## 2. Nmap
+## 2. Face de escaneo con la herramienta Nmap
 
 Comenzamos realizando un escaneo completo de puertos:
 
 ```bash
-nmap -p- TARGET_IP
-```
-
-Después realizamos una enumeración más detallada de los servicios:
-
-```bash
-nmap -sC -sV -A TARGET_IP
-```
+nmap -p- -sS -sC -sV --min-rate 5000 -n -Pn -vvv ip
 
 ### 🔎 Resultados
 
