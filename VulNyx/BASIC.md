@@ -77,7 +77,7 @@ http://10.0.2.11
 
 El servidor muestra una página por defecto de Apache.
 
-### Gobuster
+### con la herramienta Gobuster
 
 Realizamos enumeración de directorios:
 
