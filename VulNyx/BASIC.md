@@ -1,3 +1,4 @@
+<img width="1920" height="921" alt="Screenshot_2026-08-19_23_05_16" src="https://github.com/user-attachments/assets/200f38db-991f-474d-aa85-aaa822abced3" />
 # VulNyx Basic
 
 ## 📌 Información
