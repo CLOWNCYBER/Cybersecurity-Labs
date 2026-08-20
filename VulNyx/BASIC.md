@@ -99,20 +99,8 @@ http://10.0.2.11:631
 <img width="1920" height="921" alt="Screenshot_2026-08-20_01_28_21" src="https://github.com/user-attachments/assets/b3f6adb0-a58c-413e-9572-a03be63b9df9" />
 
 encontramos otra pagina web CUPS 2.3.3op2
-
-nos movemos entre los apartados de la wed hasta llegar a printers o impresoras en español
-
-# 🔎 Enumeración Adicional
-
-Se continúa investigando la configuración del servidor web y los recursos disponibles.
-
-La página principal de Apache contiene información relacionada con **UserDir**, lo que permite investigar posibles directorios asociados a usuarios.
-
-También se realiza una revisión de los recursos descubiertos durante Gobuster.
-
-El objetivo de esta fase es identificar información que pueda permitir obtener un nombre de usuario válido o credenciales.
-
----
+nos movemos entre los apartados de la wed hasta llegar a printers
+<img width="1920" height="921" alt="Screenshot_2026-08-20_01_29_10" src="https://github.com/user-attachments/assets/06a5b73d-0b45-4251-85ee-4dad59f84a96" />
 
 # 🔐 Descubrimiento de Credenciales
 
@@ -121,24 +109,17 @@ Durante la enumeración se consigue identificar un usuario válido:
 ```text
 Usuario: dimitri
 ```
-
-Con un nombre de usuario confirmado, se procede a comprobar el servicio SSH.
-
----
-
 # 💣 Acceso Inicial
 
 El puerto 22 se encuentra abierto y ejecuta SSH.
 
-```bash
-ssh dimitri@TARGET_IP
-```
-
-Al no disponer inicialmente de la contraseña, se realiza un ataque de fuerza bruta controlado contra el servicio SSH utilizando Hydra.
+se realiza un ataque de fuerza bruta controlado contra el servicio SSH 
+utilizando la herramienta Hydra y el nombre de usuario dimitri.
 
 ```bash
-hydra -l dimitri -P /usr/share/wordlists/rockyou.txt ssh://TARGET_IP
+hydra -l dimitri -P /usr/share/wordlists/rockyou.txt ssh://10.0.2.11 -t 4 -V
 ```
+<img width="1920" height="921" alt="Screenshot_2026-08-20_01_33_40" src="https://github.com/user-attachments/assets/97c0e295-f24f-4cea-a46e-289442f6e65c" />
 
 Se obtienen las siguientes credenciales:
 
@@ -146,58 +127,56 @@ Se obtienen las siguientes credenciales:
 Username: dimitri
 Password: mememe
 ```
+<img width="1920" height="921" alt="Screenshot_2026-08-20_01_45_25" src="https://github.com/user-attachments/assets/52454e29-bfac-4d8c-9c74-0cea711b59dc" />
 
 Con las credenciales obtenidas se establece una conexión SSH:
 
 ```bash
-ssh dimitri@TARGET_IP
+ssh dimitri@10.0.2.11
 ```
+<img width="1920" height="921" alt="Screenshot_2026-08-20_01_45_51" src="https://github.com/user-attachments/assets/05918c31-7301-43d5-a265-b8dc18805e7c" />
 
 Una vez dentro, comprobamos nuestra identidad:
 
 ```bash
 whoami
 ```
-
 Resultado:
-
 ```text
 dimitri
 ```
+<img width="1920" height="921" alt="Screenshot_2026-08-20_02_41_42" src="https://github.com/user-attachments/assets/6df8bce2-1534-436f-b0bd-1da2809ec638" />
 
 También comprobamos los grupos y privilegios:
 
 ```bash
 id
 ```
-
-### 📸 Acceso Inicial
-
-> Agregar aquí captura de la conexión SSH y de `whoami`.
-
----
+<img width="1920" height="921" alt="Screenshot_2026-08-20_02_46_56" src="https://github.com/user-attachments/assets/2c123176-3b1b-4d40-b7ef-ff12bea77b9f" />
 
 # 🔑 Enumeración para Privilege Escalation
 
 Una vez obtenido el acceso inicial, comenzamos a investigar posibles métodos para escalar privilegios.
+con el comando ls encontramos un archio llamado user.txt 
 
-Primero comprobamos los privilegios sudo:
+<img width="1920" height="921" alt="Screenshot_2026-08-20_01_46_16" src="https://github.com/user-attachments/assets/7ba9de5f-362b-417d-8bea-fae9f9c3ea71" />
 
-```bash
-sudo -l
+con el comando less miramos que hay dentro del archivo user.txt
+
+<img width="1920" height="921" alt="Screenshot_2026-08-20_02_58_26" src="https://github.com/user-attachments/assets/267fda8f-05cb-48d3-ba44-b090650087b5" />
+
+encontramos el primer flag
+```text
+f17d2f67c468d15600d8fc0b2ebc1d8c
 ```
 
-Después revisamos la información del sistema:
 
-```bash
-uname -a
-```
-
-También realizamos una búsqueda de archivos con permisos **SUID**:
+realizamos una búsqueda de archivos con permisos **SUID**:
 
 ```bash
 find / -perm -4000 -type f 2>/dev/null
 ```
+<img width="1920" height="921" alt="Screenshot_2026-08-20_01_46_58" src="https://github.com/user-attachments/assets/62d35508-49c2-4bda-bd5b-b7492c8ec311" />
 
 ### 🔎 Hallazgo
 
