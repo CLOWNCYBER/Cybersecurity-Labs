@@ -73,6 +73,7 @@ Al encontrar el puerto 80 abierto, accedemos al servidor web:
 ```text
 http://10.0.2.11
 ```
+<img width="1920" height="921" alt="Screenshot_2026-08-20_01_22_08" src="https://github.com/user-attachments/assets/80a7c6d6-042d-4d65-9a01-b84fd2d84842" />
 
 El servidor muestra una página por defecto de Apache.
 
@@ -81,44 +82,25 @@ El servidor muestra una página por defecto de Apache.
 Realizamos enumeración de directorios:
 
 ```bash
-gobuster dir -u http://TARGET_IP -w /usr/share/wordlists/dirb/common.txt
+gobuster dir -u http:// -w /usr/share/wordlists/dirb/common.txt -x php,txt,js,py,html
 ```
+<img width="1920" height="921" alt="Screenshot_2026-08-20_01_31_24" src="https://github.com/user-attachments/assets/660a6508-4d35-443a-8216-dc25d7c7c896" />
 
 ### 🔎 Resultados
 
-Durante la enumeración se encontraron varios recursos interesantes:
+Durante la enumeración no se encontro nada interesante
 
+<img width="1920" height="921" alt="Screenshot_2026-08-20_01_31_42" src="https://github.com/user-attachments/assets/c1f05263-7499-41bc-916b-a2e5c05aa20d" />
+
+accedemos al servidor wed nuevamente pero ahora con el puerto 631
 ```text
-/javascript
-/secrets
-/webdav
+http://10.0.2.11:631
 ```
+<img width="1920" height="921" alt="Screenshot_2026-08-20_01_28_21" src="https://github.com/user-attachments/assets/b3f6adb0-a58c-413e-9572-a03be63b9df9" />
 
-El recurso `/webdav` requiere autenticación.
+encontramos otra pagina web CUPS 2.3.3op2
 
-Comprobamos la respuesta del servidor:
-
-```bash
-curl -i http://TARGET_IP/webdav/
-```
-
-El servidor devuelve:
-
-```text
-HTTP/1.1 401 Unauthorized
-```
-
-Además, se identifica el uso de:
-
-```text
-Digest Authentication
-```
-
-### 📸 Enumeración Web
-
-> Agregar aquí las capturas de Gobuster y de la respuesta de `/webdav`.
-
----
+nos movemos entre los apartados de la wed hasta llegar a printers o impresoras en español
 
 # 🔎 Enumeración Adicional
 
