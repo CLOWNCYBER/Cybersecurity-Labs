@@ -53,16 +53,17 @@ Comenzamos realizando un escaneo completo de puertos:
 ```bash
 nmap -p- -sS -sC -sV --min-rate 5000 -n -Pn -vvv ip
 
+<img width="1920" height="921" alt="Screenshot_2026-08-20_01_20_47" src="https://github.com/user-attachments/assets/24743eb1-6d94-47e5-a696-c4d96a617b9d" />
+
 ### 🔎 Resultados
 
 El escaneo permitió identificar los siguientes servicios:
 
+<img width="1920" height="921" alt="Screenshot_2026-08-20_01_21_23" src="https://github.com/user-attachments/assets/fff64b9a-3e67-49bf-8a5c-79fb9ee66887" />
+
 * **22/tcp** → SSH
 * **80/tcp** → HTTP / Apache
-
-### 📸 Resultados de Nmap
-
-> Agregar aquí captura del escaneo Nmap.
+* **631/tcp** → ipp CUPS 2.3
 
 ---
 
@@ -71,7 +72,7 @@ El escaneo permitió identificar los siguientes servicios:
 Al encontrar el puerto 80 abierto, accedemos al servidor web:
 
 ```text
-http://TARGET_IP
+http://10.0.2.11
 ```
 
 El servidor muestra una página por defecto de Apache.
