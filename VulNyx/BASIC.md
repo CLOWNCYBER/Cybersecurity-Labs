@@ -165,7 +165,7 @@ con el comando less miramos que hay dentro del archivo user.txt
 
 <img width="1920" height="921" alt="Screenshot_2026-08-20_02_58_26" src="https://github.com/user-attachments/assets/267fda8f-05cb-48d3-ba44-b090650087b5" />
 
-encontramos el primer flag
+encontramos el primer Flag🏁
 ```text
 f17d2f67c468d15600d8fc0b2ebc1d8c
 ```
@@ -229,7 +229,7 @@ miramos que tiene dentro con el comando less
 
 <img width="1920" height="921" alt="Screenshot_2026-08-20_03_07_14" src="https://github.com/user-attachments/assets/94b5067b-4eee-43a9-998d-c535f693bf49" />
 
-encontramos nuestra ultima Flag
+encontramos nuestra ultima Flag🏁
 ```text
 551df067bd06f13f1c092743493de034
 ```
