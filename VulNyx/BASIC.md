@@ -1,4 +1,3 @@
-<img width="1920" height="921" alt="Screenshot_2026-08-19_23_05_16" src="https://github.com/user-attachments/assets/200f38db-991f-474d-aa85-aaa822abced3" />
 # VulNyx Basic
 
 ## 📌 Información
@@ -36,9 +35,7 @@ Obtener acceso inicial a la máquina **VulNyx Basic** y conseguir privilegios de
 Primero identificamos la dirección IP asignada a la máquina VulNyx Basic.
 para saber exactamente la ip de la maquina utilizamos la herramienta
 barrio de condor777
-
-
-
+<img width="1920" height="921" alt="Screenshot_2026-08-19_23_05_16" src="https://github.com/user-attachments/assets/c56a96a7-735a-4cbb-80e5-306d702ed26d" />
 
 
 
