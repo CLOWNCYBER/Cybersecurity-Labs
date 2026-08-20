@@ -50,7 +50,6 @@ Posteriormente comprobamos la conectividad con la máquina:
 
 Comenzamos realizando un escaneo completo de puertos:
 
-```bash
 nmap -p- -sS -sC -sV --min-rate 5000 -n -Pn -vvv ip
 
 <img width="1920" height="921" alt="Screenshot_2026-08-20_01_20_47" src="https://github.com/user-attachments/assets/24743eb1-6d94-47e5-a696-c4d96a617b9d" />
