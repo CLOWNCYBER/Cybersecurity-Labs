@@ -170,8 +170,7 @@ encontramos el primer flag
 f17d2f67c468d15600d8fc0b2ebc1d8c
 ```
 
-
-realizamos una búsqueda de archivos con permisos **SUID**:
+hora de realizar una búsqueda de archivos con permisos **SUID**:
 
 ```bash
 find / -perm -4000 -type f 2>/dev/null
