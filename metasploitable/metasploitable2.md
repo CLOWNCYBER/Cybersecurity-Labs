@@ -114,29 +114,6 @@ python3 49757.py 192.168.100.213
 python3 el nombre del exploit en el caso mio era 49757.py y la ip victima
 
 
-# 🐚 Initial Access
-
-Document how you obtained your first shell on the machine.
-
-Example:
-
-```bash
-whoami
-```
-
-```bash
-hostname
-```
-
-```bash
-id
-```
-
-### 📸 Shell
-
-Drag your screenshot here.
-
----
 
 # 🔑 Privilege Escalation
 
