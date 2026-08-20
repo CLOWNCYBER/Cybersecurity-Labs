@@ -41,9 +41,6 @@ barrio de condor777
 
 
 
-```bash
-ip addr
-```
 
 Posteriormente comprobamos la conectividad con la máquina:
 
