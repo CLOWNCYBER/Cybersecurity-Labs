@@ -38,13 +38,12 @@ barrio de condor777
 <img width="1920" height="921" alt="Screenshot_2026-08-19_23_05_16" src="https://github.com/user-attachments/assets/c56a96a7-735a-4cbb-80e5-306d702ed26d" />
 
 <img width="1920" height="921" alt="Screenshot_2026-08-20_01_15_06" src="https://github.com/user-attachments/assets/dd81282f-15cd-46cc-93b8-390f1f71d745" />
-identificamos nuestra ip es la 10.0.2.11
+identificamos que nuestra ip es la 10.0.2.11
 
 Posteriormente comprobamos la conectividad con la máquina:
 
-```bash
-ping TARGET_IP
-```
+<img width="1920" height="921" alt="Screenshot_2026-08-20_01_16_50" src="https://github.com/user-attachments/assets/a51adf43-d0ec-4064-91e0-9026fa53cb5e" />
+
 
 ---
 
