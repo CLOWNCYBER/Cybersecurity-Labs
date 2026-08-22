@@ -164,7 +164,7 @@ es una pagina apache comun
 
 # 📂 Enumeración de directorios
 
-Utilizamos la erramienta Gobuster:
+Utilizamos la herramienta Gobuster:
 
 ```bash
 gobuster dir -u http://172.17.0.2 -w common.txt -x php,txt,js,py,html
