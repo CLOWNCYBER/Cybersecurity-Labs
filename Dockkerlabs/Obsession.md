@@ -10,10 +10,6 @@
 | Sistema Operativo | Linux                                                  |
 | Categoría         | Enumeración / Acceso Inicial / Escalada de Privilegios |
 
-
-<img width="1013" height="640" alt="hero" src="https://github.com/user-attachments/assets/20583026-fcd6-49d1-a9c9-d82ce96c32b5" />
-
-
 ---
 
 # 🎯 Objetivo
