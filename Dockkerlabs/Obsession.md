@@ -27,7 +27,7 @@ Obtener acceso inicial a la máquina **Obsession** y conseguir privilegios de **
 * SSH
 * GTFOBins
 
-📚 Comenzando
+📚 COMENZANDO
 
 ● Descargar la VM de DockerLabs 
 
