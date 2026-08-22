@@ -130,6 +130,8 @@ miramos que contienen cada uno con el comando
 
 <img width="1808" height="446" alt="Screenshot_2026-08-22_01_49_13" src="https://github.com/user-attachments/assets/1a400921-2a68-4e12-90b2-fc82000577b1" />
 
+---
+
 ### 🔎 Hallazgos
 
 Los archivos proporcionan información relacionada con usuarios y configuración de la máquina.
@@ -142,6 +144,8 @@ Gonza
 ```
 
 Esta información será útil para continuar la enumeración.
+
+---
 
 # 🌐 Enumeración Web
 
@@ -156,6 +160,8 @@ http://172.17.0.2
 NO encontramos nada importante en http
 es una pagina apache comun
 
+---
+
 # 📂 Enumeración de directorios
 
 Utilizamos la erramienta Gobuster:
@@ -165,6 +171,8 @@ gobuster dir -u http://172.17.0.2 -w common.txt -x php,txt,js,py,html
 ```
 
 <img width="826" height="773" alt="Screenshot_2026-08-22_16_18_35" src="https://github.com/user-attachments/assets/594f9b6d-2aac-4e99-8393-dc2a1d7841e2" />
+
+---
 
 ### 🔎 Resultados
 
@@ -193,6 +201,8 @@ El archivo proporciona información adicional relacionada con el usuario:
 ```text
 russoski
 ```
+
+---
 
 # 💣 Acceso Inicial
 
@@ -241,6 +251,7 @@ russoski
 
 <img width="424" height="95" alt="Screenshot_2026-08-22_17_08_02" src="https://github.com/user-attachments/assets/8d1de8ed-9d4d-47eb-836b-b0de2206a1d1" />
 
+---
 
 # 🔑 Escalada de Privilegios
 
@@ -289,6 +300,7 @@ root
 
 <img width="659" height="142" alt="Screenshot_2026-08-22_17_24_48" src="https://github.com/user-attachments/assets/d630774d-f8d3-4479-90f8-bd22206b945a" />
 
+---
 
 # 👑 Acceso Root
 
@@ -337,7 +349,11 @@ cat
 
 <img width="686" height="252" alt="Screenshot_2026-08-22_17_54_27" src="https://github.com/user-attachments/assets/2d2904e4-2e44-4fb8-b898-cfdceca723f7" />
 
+---
+
 LISTO MAQUINA HACKEADA👨‍💻
+
+---
 
 # 🧠 Lecciones Aprendidas
 
