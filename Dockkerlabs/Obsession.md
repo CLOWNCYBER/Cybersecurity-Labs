@@ -27,6 +27,18 @@ Obtener acceso inicial a la máquina **Obsession** y conseguir privilegios de **
 * SSH
 * GTFOBins
 
+📚 Comenzando
+*Descargar la VM de DockerLabs 
+*Descomprimir la VM desde la terminal de Kali
+```bash unzip hedgehog.zip 
+Archivo descomprimido
+auto_deploy.sh
+Pasar a Super_Usuario
+sudo su
+Correr la VM
+sudo ./auto_deploy.sh hedgehog.tar ```
+
+
 ---
 
 # 🔍 Enumeración
