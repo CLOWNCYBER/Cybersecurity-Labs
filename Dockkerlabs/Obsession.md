@@ -335,7 +335,7 @@ cat
 
 <img width="686" height="252" alt="Screenshot_2026-08-22_17_54_27" src="https://github.com/user-attachments/assets/2d2904e4-2e44-4fb8-b898-cfdceca723f7" />
 
-LISTO MAQUINA HACKEADA😎👨‍💻👩‍💻
+LISTO MAQUINA HACKEADA👨‍💻
 
 # 🧠 Lecciones Aprendidas
 
