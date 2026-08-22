@@ -33,7 +33,7 @@ Obtener acceso inicial a la máquina **Obsession** y conseguir privilegios de **
 
 ● Descomprimir la VM desde la terminal de Kali
 
-```unzip hedgehog.zip```
+```unzip Obsession.zip```
 
 ● Archivo descomprimido
 
@@ -45,7 +45,7 @@ Obtener acceso inicial a la máquina **Obsession** y conseguir privilegios de **
 
 ● Correr la VM
 
-```sudo ./auto_deploy.sh hedgehog.tar ```
+```sudo ./auto_deploy.sh Obsession.tar ```
 
 
 ---
