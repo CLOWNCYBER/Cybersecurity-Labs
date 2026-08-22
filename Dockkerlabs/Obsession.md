@@ -46,8 +46,10 @@ Obtener acceso inicial a la máquina **Obsession** y conseguir privilegios de **
 
 ```sudo ./auto_deploy.sh Obsession.tar ```
 
+<img width="1678" height="780" alt="Screenshot_2026-08-22_01_37_41" src="https://github.com/user-attachments/assets/292efbac-98b5-43c1-b66e-24aa8d2a223d" />
 
-# 🔍 Enumeración
+
+🔍 Enumeración
 
 ## 1. Descubrimiento del objetivo
 
@@ -61,6 +63,10 @@ Comprobamos la conectividad:
 ```bash
 ping -c 2 172.17.0.2
 ```
+
+<img width="1072" height="343" alt="Screenshot_2026-08-22_01_40_15" src="https://github.com/user-attachments/assets/0ac1234e-3e15-4ac1-89e9-236f11efacc6" />
+
+
 ## 2. Nmap
 
 Realizamos un escaneo de los puertos:
@@ -68,6 +74,8 @@ Realizamos un escaneo de los puertos:
 ```bash
 nmap -p- -sS -sC -sV --min-rate 5000 -n -Pn 172.17.0.2
 ```
+
+<img width="1056" height="778" alt="Screenshot_2026-08-22_01_43_54" src="https://github.com/user-attachments/assets/4f98d682-f6bd-40be-93b9-816aef849623" />
 
 ### 🔎 Resultados
 
@@ -86,13 +94,13 @@ Al encontrar FTP abierto, comprobamos si permitía acceso anónimo:
 ```bash
 ftp 172.17.0.2
 ```
-
 Utilizamos:
-
 ```text
 Usuario: anonymous
 Contraseña: anonymous
 ```
+
+<img width="496" height="305" alt="Screenshot_2026-08-22_16_48_44 (1)" src="https://github.com/user-attachments/assets/c755e606-0c7d-4668-93e4-35d826c9c25c" />
 
 Una vez dentro, listamos los archivos:
 
@@ -100,7 +108,9 @@ Una vez dentro, listamos los archivos:
 ls
 ```
 
-Encontramos varios archivos de texto.
+<img width="925" height="184" alt="Screenshot_2026-08-22_01_46_14" src="https://github.com/user-attachments/assets/addaf5e6-1434-42df-9071-1ecedc817eb7" />
+
+Encontramos 2 archivos de texto.
 
 chat-gonza.txt
 
@@ -111,6 +121,8 @@ miramos que contienen cada uno con el comando
 ```bash
  less
 ```
+
+<img width="1808" height="446" alt="Screenshot_2026-08-22_01_49_13" src="https://github.com/user-attachments/assets/1a400921-2a68-4e12-90b2-fc82000577b1" />
 
 ### 🔎 Hallazgos
 
