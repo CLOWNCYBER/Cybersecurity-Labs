@@ -338,7 +338,7 @@ Una vez dentro, listamos los archivos:
 ```bash
 ls
 ```
-Entro del directorio root se encuenta
+dentro del directorio root se encuenta
 
 un archivo llamado Video-Nagore-Fernandez.txt
 
