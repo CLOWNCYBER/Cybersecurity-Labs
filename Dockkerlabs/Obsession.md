@@ -26,6 +26,8 @@ Obtener acceso inicial a la máquina **Obsession** y conseguir privilegios de **
 * Hydra
 * SSH
 
+---
+
 # 🚀 COMENZANDO
 
 ● Descargar la VM de DockerLabs 
@@ -48,6 +50,7 @@ Obtener acceso inicial a la máquina **Obsession** y conseguir privilegios de **
 
 <img width="1678" height="780" alt="Screenshot_2026-08-22_01_37_41" src="https://github.com/user-attachments/assets/292efbac-98b5-43c1-b66e-24aa8d2a223d" />
 
+---
 
 🔍 Enumeración
 
@@ -66,6 +69,7 @@ ping -c 2 172.17.0.2
 
 <img width="1072" height="343" alt="Screenshot_2026-08-22_01_40_15" src="https://github.com/user-attachments/assets/0ac1234e-3e15-4ac1-89e9-236f11efacc6" />
 
+---
 
 ## 2. Nmap
 
@@ -86,6 +90,8 @@ Se identificaron los siguientes servicios:
 * **80/tcp → HTTP**
 
 Uno de los primeros hallazgos interesantes fue que el servicio FTP permitía **acceso anónimo**.
+
+---
 
 # 📂 Enumeración FTP
 
