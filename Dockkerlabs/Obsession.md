@@ -25,7 +25,6 @@ Obtener acceso inicial a la máquina **Obsession** y conseguir privilegios de **
 * FTP
 * Hydra
 * SSH
-* GTFOBins
 
 # 🚀 COMENZANDO
 
@@ -48,8 +47,6 @@ Obtener acceso inicial a la máquina **Obsession** y conseguir privilegios de **
 ```sudo ./auto_deploy.sh Obsession.tar ```
 
 
----
-
 # 🔍 Enumeración
 
 ## 1. Descubrimiento del objetivo
@@ -57,29 +54,19 @@ Obtener acceso inicial a la máquina **Obsession** y conseguir privilegios de **
 Primero identificamos la dirección IP asignada a la máquina.
 
 ```bash
-ip addr
+172.17.0.2
 ```
-
 Comprobamos la conectividad:
 
 ```bash
-ping TARGET_IP
+ping -c 2 172.17.0.2
 ```
-
----
-
 ## 2. Nmap
 
 Realizamos un escaneo de los puertos:
 
 ```bash
-nmap -p- TARGET_IP
-```
-
-Después realizamos una enumeración más detallada:
-
-```bash
-nmap -sC -sV TARGET_IP
+nmap -p- -sS -sC -sV --min-rate 5000 -n -Pn 172.17.0.2
 ```
 
 ### 🔎 Resultados
@@ -92,18 +79,12 @@ Se identificaron los siguientes servicios:
 
 Uno de los primeros hallazgos interesantes fue que el servicio FTP permitía **acceso anónimo**.
 
-### 📸 Resultados de Nmap
-
-> Agregar aquí captura de Nmap.
-
----
-
 # 📂 Enumeración FTP
 
 Al encontrar FTP abierto, comprobamos si permitía acceso anónimo:
 
 ```bash
-ftp TARGET_IP
+ftp 172.17.0.2
 ```
 
 Utilizamos:
@@ -121,31 +102,28 @@ ls
 
 Encontramos varios archivos de texto.
 
-Para descargarlos:
+chat-gonza.txt
+
+pendientes.txt
+
+miramos que contienen cada uno con el comando 
 
 ```bash
-mget *
+ less
 ```
 
 ### 🔎 Hallazgos
 
-Los archivos descargados proporcionan información relacionada con usuarios y configuración de la máquina.
+Los archivos proporcionan información relacionada con usuarios y configuración de la máquina.
 
 Entre la información obtenida aparecen posibles usuarios:
 
 ```text
 Russoski
 Gonza
-Nagore
 ```
 
 Esta información será útil para continuar la enumeración.
-
-### 📸 Enumeración FTP
-
-> Agregar captura del acceso FTP y de los archivos encontrados.
-
----
 
 # 🌐 Enumeración Web
 
