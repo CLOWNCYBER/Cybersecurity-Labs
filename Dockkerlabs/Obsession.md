@@ -30,13 +30,13 @@ Obtener acceso inicial a la máquina **Obsession** y conseguir privilegios de **
 📚 Comenzando
 *Descargar la VM de DockerLabs 
 *Descomprimir la VM desde la terminal de Kali
-```bash unzip hedgehog.zip 
-Archivo descomprimido
-auto_deploy.sh
-Pasar a Super_Usuario
-sudo su
-Correr la VM
-sudo ./auto_deploy.sh hedgehog.tar ```
+```bash unzip hedgehog.zip```
+```bash Archivo descomprimido```
+```bashauto_deploy.sh```
+```bashPasar a Super_Usuario```
+```bashsudo su```
+```bashCorrer la VM```
+```bashsudo ./auto_deploy.sh hedgehog.tar ```
 
 
 ---
