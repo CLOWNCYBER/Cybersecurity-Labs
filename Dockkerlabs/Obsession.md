@@ -148,8 +148,7 @@ http://172.17.0.2
 ```
 
 NO encontramos nada importante en http
-es una pagina apache comun y corriente.
-
+es una pagina apache comun
 
 # 📂 Enumeración de directorios
 
@@ -292,13 +291,11 @@ Finalmente comprobamos que tenemos privilegios administrativos:
 ```bash
 whoami
 ```
-
 Resultado:
 
 ```text
 root
 ```
-
 También podemos verificar:
 
 ```bash
