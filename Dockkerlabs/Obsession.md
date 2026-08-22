@@ -148,7 +148,7 @@ http://172.17.0.2
 ```
 
 NO encontramos nada importante en http
-es una pagina apache comun y corriente
+es una pagina apache comun y corriente.
 
 
 # 📂 Enumeración de directorios
