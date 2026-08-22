@@ -10,6 +10,10 @@
 | Sistema Operativo | Linux                                                  |
 | Categoría         | Enumeración / Acceso Inicial / Escalada de Privilegios |
 
+
+<img width="1013" height="640" alt="hero" src="https://github.com/user-attachments/assets/20583026-fcd6-49d1-a9c9-d82ce96c32b5" />
+
+
 ---
 
 # 🎯 Objetivo
@@ -296,19 +300,42 @@ Resultado:
 ```text
 root
 ```
+
+<img width="127" height="86" alt="Screenshot_2026-08-22_17_24_48" src="https://github.com/user-attachments/assets/c6d6c032-7e41-438c-952c-2387ceb164f4" />
+
+
 También podemos verificar:
 
 ```bash
 id
 ```
 
-El resultado confirma que hemos obtenido privilegios completos sobre la máquina.
+<img width="509" height="105" alt="Screenshot_2026-08-22_17_48_09" src="https://github.com/user-attachments/assets/63aa0abf-575c-46b9-9a63-e4e1e9028849" />
 
-### 📸 Root
+cambiamos el prompt de la terminal
 
-> Agregar captura final demostrando acceso como root.
+```bash
+script /dev/null -c bash
+```
 
----
+<img width="634" height="94" alt="Screenshot_2026-08-22_17_53_37" src="https://github.com/user-attachments/assets/7a7ffc5c-e25d-4a41-b8b9-b7c6ccd9422b" />
+
+Una vez dentro, listamos los archivos:
+```bash
+ls
+```
+Entro del directorio root se encuenta
+
+un archivo llamado Video-Nagore-Fernandez.txt
+
+miramos que contiene dentro con el comando 
+```bash
+cat
+```
+
+<img width="686" height="252" alt="Screenshot_2026-08-22_17_54_27" src="https://github.com/user-attachments/assets/2d2904e4-2e44-4fb8-b898-cfdceca723f7" />
+
+LISTO MAQUINA HACKEADA😎👨‍💻👩‍💻
 
 # 🧠 Lecciones Aprendidas
 
