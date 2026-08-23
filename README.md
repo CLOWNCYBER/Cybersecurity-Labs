@@ -12,6 +12,8 @@ Aquí documento mi aprendizaje en:
 - Hack The Box
 - PortSwigger Academy
 
+![Hacker](./github_hacker_animated.gif)
+
 ---
 
 # 🖥️ Tecnologías
