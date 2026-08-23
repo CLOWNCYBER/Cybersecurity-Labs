@@ -6,7 +6,8 @@ Bienvenido a mi repositorio.
 
 Aquí documento mi aprendizaje en:
 
-- TryHackMe
+- TryHackMe                                                       <img width="500" height="500" alt="Right_Side" src="https://github.com/user-attachments/assets/be160711-e04b-44c2-8d8e-8881228800cd" />
+
 - VulNyx
 - DockerLabs
 - Hack The Box
